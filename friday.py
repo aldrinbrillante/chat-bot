@@ -1,4 +1,5 @@
-from os import system #this is a core python package
+# from os import system #this is a core python package
+import os
 import random #you want to randomly generate a file name for the audio file
 
 
@@ -58,41 +59,48 @@ def record_audio(ask=False): #setting optional ask argument to False
         # return voice_data 
         return voice_data
 
-
+def friday(audio_string):
+    tts = gTTS(text=audio_string, lang='en')
+    r = random.randint(1, 10000000)
+    audio_file = "audio-" + str(r) + ".mp3"
+    tts.save(audio_file)
+    playsound.playsound(audio_file)
+    print(audio_string)
+    os.remove(audio_file)
 
 # now let's start coding the response
 # create function respond with voice_data inside
 def respond(voice_data):
     # if "what is your name" is heard in voice_data google_audio recording:
     if "what is your name" in voice_data:
-        print("My name is Alexis")
+        friday("My name is Alexis")
     elif "what time is it" in voice_data:
-        print("Time: ", time.ctime())
+        friday("Time: ", time.ctime())
     elif "what day is it" in voice_data:
-        print(datetime.datetime.now())
+        friday(datetime.datetime.now())
     elif 'search' in voice_data:
         search = record_audio("What do you want to search for: ")
-        print("ends-------------")
+        friday("ends-------------")
         url = "https://google.com/search?q=" + search
         webbrowser.get().open(url)
-        print("Here is what I found for " + search)
+        friday("Here is what I found for " + search)
     elif 'find location' in voice_data:
         location = record_audio("What is the location?: ")
         url = "https://google.nl/maps/place/" + location + "/&amp;"
         webbrowser.get().open(url)
-        print("Here is the location of " + location)
+        friday("Here is the location of " + location)
     elif 'find place' in voice_data:
         location = record_audio("What is the location?: ")
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
-        print("Here is the location of " + location)
-    elif "exit" or "thank you that is all" in voice_data: 
+        friday("Here is the location of " + location)
+    elif "exit" or "thank you that is all" in voice_data:
         exit()
         
 
 
 time.sleep(1) #waits however many seconds we want
-print('How can I help you...')
+friday('How can I help you...')
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 while 1:
     voice_data = record_audio() 
