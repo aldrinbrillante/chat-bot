@@ -75,9 +75,9 @@ def respond(voice_data):
     if "what is your name" in voice_data:
         friday("My name is Alexis")
     elif "what time is it" in voice_data:
-        friday("Time: ", time.ctime())
+        print("Time is ", time.ctime())
     elif "what day is it" in voice_data:
-        friday(datetime.datetime.now())
+        print(datetime.datetime.now())
     elif 'search' in voice_data:
         friday("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")
