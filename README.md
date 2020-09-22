@@ -1,4 +1,4 @@
-# chat-bot
+# Chat Bot
 
 Language used: Python
 
