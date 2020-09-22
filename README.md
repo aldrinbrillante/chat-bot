@@ -7,6 +7,7 @@ main class: friday.py
 trial and error class: trial-error.py
 
 ASSIGNMENT REQUIREMENTS:
+
 Create a function called get_bot_response(). This function must: 
 
 It should have 1 parameter called user_response, which is a string with the users input. 
