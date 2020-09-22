@@ -79,8 +79,8 @@ def respond(voice_data):
     elif "what day is it" in voice_data:
         friday(datetime.datetime.now())
     elif 'search' in voice_data:
-        search = record_audio("What do you want to search for: ")
-        friday("ends-------------")
+        friday("What do you want to search for?")
+        search = record_audio("Please say what you want to search for: ")
         url = "https://google.com/search?q=" + search
         webbrowser.get().open(url)
         friday("Here is what I found for " + search)
@@ -94,8 +94,8 @@ def respond(voice_data):
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
         friday("Here is the location of " + location)
-    elif "exit" or "thank you that is all" in voice_data:
-        exit()
+    # elif "exit" or "thank you that is all" in voice_data:
+       # exit()
         
 
 
