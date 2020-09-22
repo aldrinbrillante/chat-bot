@@ -63,17 +63,17 @@ def friday(audio_string):
     tts = gTTS(text=audio_string, lang='en')
     r = random.randint(1, 10000000)
     audio_file = "audio-" + str(r) + ".mp3"
-    tts.save(audio_file)
+    #tts.save(audio_file)
     playsound.playsound(audio_file)
     print(audio_string)
-    os.remove(audio_file)
+    #os.remove(audio_file)
 
 # now let's start coding the response
 # create function respond with voice_data inside
 def respond(voice_data):
     # if "what is your name" is heard in voice_data google_audio recording:
     if "what is your name" in voice_data:
-        friday("My name is Alexis")
+        friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
     elif "what time is it" in voice_data:
         print("Time ", time.ctime())
     elif "what day is it" in voice_data:
