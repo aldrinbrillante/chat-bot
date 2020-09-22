@@ -75,7 +75,7 @@ def respond(voice_data):
     if "what is your name" in voice_data:
         friday("My name is Alexis")
     elif "what time is it" in voice_data:
-        print("Time is ", time.ctime())
+        print("Time ", time.ctime())
     elif "what day is it" in voice_data:
         print(datetime.datetime.now())
     elif 'search' in voice_data:
@@ -94,8 +94,8 @@ def respond(voice_data):
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
         friday("Here is the location of " + location)
-    # elif "exit" or "thank you that is all" in voice_data:
-       # exit()
+    elif "exit" or "thank you that is all" in voice_data:
+        exit()
         
 
 
