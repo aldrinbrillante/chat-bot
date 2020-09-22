@@ -63,10 +63,10 @@ def friday(audio_string):
     tts = gTTS(text=audio_string, lang='en')
     r = random.randint(1, 10000000)
     audio_file = "audio-" + str(r) + ".mp3"
-    #tts.save(audio_file)
+    tts.save(audio_file)
     playsound.playsound(audio_file)
     print(audio_string)
-    #os.remove(audio_file)
+    os.remove(audio_file)
 
 # now let's start coding the response
 # create function respond with voice_data inside
