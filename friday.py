@@ -31,6 +31,7 @@ from gtts import gTTS
 import playsound
 
 # pip3 install pyobjc : this has app kit that playsound depends on. PyObjC is a bridge between Python and Objective-C. 
+import PyObjCTools 
 
 # initialize recognizer
 # responsible for recognizing speech 
