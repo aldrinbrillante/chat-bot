@@ -15,7 +15,7 @@ import time
 import datetime
 
 
-# pip3 instal pyaudio
+# pip3 install pyaudio
 # installs required pyaudio which is 
 # needed to use the microphone
 import pyaudio
@@ -64,7 +64,7 @@ def record_audio(ask=False): #setting optional ask argument to False
 
 #this while be friday's(jarvis') function; uses a temp saved audio file and then deletes it upon 'exit' command 
 def friday(audio_string):
-    tts = gTTS(text=audio_string, lang='en')
+    tts = gTTS(text=audio_string, lang='en') 
     r = random.randint(1, 10000000)
     audio_file = "audio-" + str(r) + ".mp3"
     tts.save(audio_file)
