@@ -61,6 +61,7 @@ def record_audio(ask=False): #setting optional ask argument to False
         # return user_response 
         return user_response
 
+#this while be friday's(jarvis') function 
 def friday(audio_string):
     tts = gTTS(text=audio_string, lang='en')
     r = random.randint(1, 10000000)
