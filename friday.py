@@ -96,10 +96,11 @@ def get_bot_response(user_response):
     #add the required lists for class grade
     food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to in and out. Just me and you. ha. ha. ha"]
     food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
-    # get a random word from the list
+    # get a random word from the list food_good and food_bad
     good = random.choice(food_good)
     bad = random.choice(food_bad)
 
+    #below are the if statement in get_bot_response() for conversation purposes
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
         friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
@@ -129,10 +130,10 @@ def get_bot_response(user_response):
         friday("Here is the location of " + location)
     elif "exit" in user_response:
         friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
-        exit()
+        exit() #exits function, while loop, and program upon command
 
 
-# now, below is the beginning of what user will initially here when you run the program
+# below is the beginning of what user will initially hear when you run the program
 friday('Hello. Are you a male or female? Please type your response in the terminal to tell me')
 gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
 
@@ -145,9 +146,10 @@ friday("So, how may I help you?")
 
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
+
+#while loop to allow program to continue to listen to user and respond
 while 1:
     user_response = record_audio() 
     get_bot_response(user_response)
-# from here, you can perform print(user_response) to double check that your audio is being heard
 
 
