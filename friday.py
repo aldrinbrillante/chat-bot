@@ -91,8 +91,8 @@ def female():
     else:
         friday("Good evening madam!")
 
-# now let's start coding the response
-# create function respond with user_response inside
+# now let's start coding the response + interaction 
+# get_bot_response function with user_response inside
 def get_bot_response(user_response):
     #add the required lists for class grade
     food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to in and out. Just me and you. ha. ha. ha"]
@@ -148,7 +148,7 @@ friday("So, how may I help you?")
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
 
-#while loop to allow program to continue to listen to user and respond
+#while loop to allow program to continue to listen to user and respond + records and deletes audio once finished
 while 1:
     user_response = record_audio() 
     get_bot_response(user_response)
