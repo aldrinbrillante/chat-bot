@@ -2,6 +2,7 @@
 import os
 import random #you want to randomly generate a file name for the audio file
 
+from random import choice
 
 #make sure to have python 3 interpreter ctrl+shift+P 
 #pip3 install speechrecognition
@@ -44,20 +45,20 @@ def record_audio(ask=False): #setting optional ask argument to False
         # create audio variable and set to recognizer object and then use listen() method. Pass in source which is our microphone
         audio = r.listen(source, phrase_time_limit=3) 
 
-        # create variable for voice_data and initialize 
-        voice_data = ''
+        # create variable for user_response and initialize 
+        user_response = ''
         # create try block with 2 exceptions
         try:
             #create variable for voice data; whatever we say, we want to put that into a variable. Use recognize_google and pass in our audio variable
-            voice_data = r.recognize_google(audio)
+            user_response = r.recognize_google(audio)
         # create unknownValueError exception for when it doesn't understand what user is saying
         except sr.UnknownValueError:
             print("Sorry, I did not get that")
         # create request error exception if something is wrong/if server isn't working
         except sr.RequestError:
             print("Sorry, my speech service is in maintenance. Be right back.")
-        # return voice_data 
-        return voice_data
+        # return user_response 
+        return user_response
 
 def friday(audio_string):
     tts = gTTS(text=audio_string, lang='en')
@@ -85,6 +86,36 @@ def female():
         friday("Good afternoon madam!")
     else:
         friday("Good evening madam!")
+
+# now let's start coding the response
+# create function respond with user_response inside
+def get_bot_response(user_response):
+    # if "what is your name" is heard in user_response google_audio recording:
+    if "what is your name" in user_response:
+        friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
+    elif "what is your purpose" in user_response:
+        friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food.")
+    elif 'search' in user_response:
+        friday("What do you want to search for?")
+        search = record_audio("Please say what you want to search for: ")
+        url = "https://google.com/search?q=" + search
+        webbrowser.get().open(url)
+        friday("Here is what I found for " + search)
+    elif 'find location' in user_response:
+        location = record_audio("What is the location?: ")
+        url = "https://google.nl/maps/place/" + location + "/&amp;"
+        webbrowser.get().open(url)
+        friday("Here is the location of " + location)
+    elif 'find place' in user_response:
+        location = record_audio("What is the location?: ")
+        url = "https://google.nl/maps/search/" + location + "/&amp;"
+        webbrowser.get().open(url)
+        friday("Here is the location of " + location)
+    elif "exit" or "i am done" in user_response:
+        friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
+        exit()
+        
+
 # now, below is the beginning of what user will initially here when you run the program
 friday('Hello. Are you a male or female? Please type your response in the terminal to tell me')
 gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
@@ -93,55 +124,14 @@ if gender == 'male':
     male()
 elif gender == 'female':
     female()
-
-
 friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
 friday("So, how may I help you?")
 
-
-
-# now let's start coding the response
-# create function respond with voice_data inside
-def respond(voice_data):
-    # if "what is your name" is heard in voice_data google_audio recording:
-    if "what is your name" or "who are you" or "what are you" in voice_data:
-        friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
-    elif "what time is it" in voice_data:
-        print("Time ", time.ctime())
-    elif "what day is it" in voice_data:
-        print(datetime.datetime.now())
-    elif 'search' in voice_data:
-        friday("What do you want to search for?")
-        search = record_audio("Please say what you want to search for: ")
-        url = "https://google.com/search?q=" + search
-        webbrowser.get().open(url)
-        friday("Here is what I found for " + search)
-    elif 'find location' in voice_data:
-        location = record_audio("What is the location?: ")
-        url = "https://google.nl/maps/place/" + location + "/&amp;"
-        webbrowser.get().open(url)
-        friday("Here is the location of " + location)
-    elif 'find place' in voice_data:
-        location = record_audio("What is the location?: ")
-        url = "https://google.nl/maps/search/" + location + "/&amp;"
-        webbrowser.get().open(url)
-        friday("Here is the location of " + location)
-    elif "exit" or "thank you that is all" in voice_data:
-        friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
-        exit()
-        
-
-
-
-
-
-
-# friday('How can I help you...')
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
 while 1:
-    voice_data = record_audio() 
-    respond(voice_data)
-# from here, you can perform print(voice_data) to double check that your audio is being heard
+    user_response = record_audio() 
+    get_bot_response(user_response)
+# from here, you can perform print(user_response) to double check that your audio is being heard
 
 
