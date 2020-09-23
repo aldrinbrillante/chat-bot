@@ -93,10 +93,10 @@ def female():
 def get_bot_response(user_response):
     #add the required lists for class grade
     food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to in and out. Just me and you. ha. ha. ha"]
-    #food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
+    food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
     # get a random word from the list
     good = random.choice(food_good)
-    #bad = random.choice(food_bad)
+    bad = random.choice(food_bad)
 
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
@@ -107,6 +107,8 @@ def get_bot_response(user_response):
         friday("Okay great! What do you like better? Pizza or Calzones?")
     elif "I like pizza" in user_response:
         friday(good) #IT KEEPS REPEATING THE STATEMENT ABOVE
+    elif "I like calzones" in user_response:
+        friday(bad)
     elif 'search' in user_response:
         friday("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")
@@ -126,16 +128,6 @@ def get_bot_response(user_response):
     elif "exit" in user_response:
         friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
         exit()
-
-def get_bot_response_v2(user_response):
-    #add the required lists for class grade
-    #food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to in and out. Just me and you. ha. ha. ha"]
-    #food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
-    # get a random word from the list
-    #good = random.choice(food_good)
-    #bad = random.choice(food_bad)
-    if "hello friday" in user_response:
-        friday("hello. how are you feeling today?")
 
 # #combine functions and conditionals to get a response from the bot
 # def get_bot_response_2(user_response):
@@ -166,7 +158,6 @@ time.sleep(1) #waits however many seconds we want
 while 1:
     user_response = record_audio() 
     get_bot_response(user_response)
-    get_bot_response_v2(user_response)
 # from here, you can perform print(user_response) to double check that your audio is being heard
 
 

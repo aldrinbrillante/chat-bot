@@ -1,4 +1,5 @@
-# Chat Bot
+# Chat Bot Project
+# run friday.py
 
 Language used: Python
 
