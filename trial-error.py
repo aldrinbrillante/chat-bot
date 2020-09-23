@@ -1,5 +1,6 @@
-# from os import system #this is a core python package
 import os
+from os import system #this is a core python package
+
 import random #you want to randomly generate a file name for the audio file
 
 # from random import choice
@@ -102,10 +103,10 @@ def get_bot_response(user_response):
         friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
         friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
-    #elif "I would love to talk about food":
-       # friday("Okay great! What do you like better? Pizza or Calzones?")
-    # elif "I like pizza" in user_response:
-    #     friday(good) #IT KEEPS REPEATING THE STATEMENT ABOVE
+    elif "I would love to talk about food":
+        friday("Okay great! What do you like better? Pizza or Calzones?")
+    elif "I like pizza" in user_response:
+        friday(good) #IT KEEPS REPEATING THE STATEMENT ABOVE
     elif 'search' in user_response:
         friday("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")
@@ -122,7 +123,7 @@ def get_bot_response(user_response):
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
         friday("Here is the location of " + location)
-    elif "exit" or "i am done" in user_response:
+    elif "exit" in user_response:
         friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
         exit()
 
