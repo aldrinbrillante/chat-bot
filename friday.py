@@ -99,7 +99,7 @@ def get_bot_response(user_response):
     bad = random.choice(food_bad)
 
     # if "what is your name" is heard in user_response google_audio recording:
-    if input("what is your name") in user_response:
+    if "what is your name" in user_response:
         friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
         friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
@@ -129,18 +129,6 @@ def get_bot_response(user_response):
         friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
         exit()
 
-# #combine functions and conditionals to get a response from the bot
-# def get_bot_response_2(user_response):
-#   #add some bot responses to this list
-#   food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to in and out. Just me and you. ha. ha. ha"]
-#   food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
-
-#   if user_response == "happy":
-#     return choice(bot_response_happy)
-#   elif user_response == "sad":
-#     return choice(bot_response_sad)
-#   else:
-#     return "I hope your day gets better"
 
 # now, below is the beginning of what user will initially here when you run the program
 friday('Hello. Are you a male or female? Please type your response in the terminal to tell me')
