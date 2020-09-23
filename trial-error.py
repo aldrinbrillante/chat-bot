@@ -42,7 +42,7 @@ def record_audio(ask=False): #setting optional ask argument to False
         if ask:
             print(ask)
         # create audio variable and set to recognizer object and then use listen() method. Pass in source which is our microphone
-        audio = r.listen(source, phrase_time_limit=5) 
+        audio = r.listen(source, phrase_time_limit=3) 
 
         # create variable for voice_data and initialize 
         voice_data = ''
@@ -68,11 +68,43 @@ def friday(audio_string):
     print(audio_string)
     os.remove(audio_file)
 
+def male():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        friday("Good morning sir!")
+    elif hour>= 12 and hour < 18:
+        friday("Good afternoon sir!")
+    else:
+        friday("Good evening sir!")
+
+def female():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        friday("Good morning madam!")
+    elif hour>= 12 and hour < 18:
+        friday("Good afternoon madam!")
+    else:
+        friday("Good evening madam!")
+# now, below is the beginning of what user will initially here when you run the program
+friday('Hello. Are you a male or female? Please type your response in the terminal to tell me')
+gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
+
+if gender == 'male':
+    male()
+elif gender == 'female':
+    female()
+
+
+friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+friday("So, how may I help you?")
+
+
+
 # now let's start coding the response
 # create function respond with voice_data inside
 def respond(voice_data):
     # if "what is your name" is heard in voice_data google_audio recording:
-    if "what is your name" in voice_data:
+    if "what is your name" or "who are you" or "what are you" in voice_data:
         friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
     elif "what time is it" in voice_data:
         print("Time ", time.ctime())
@@ -95,47 +127,21 @@ def respond(voice_data):
         webbrowser.get().open(url)
         friday("Here is the location of " + location)
     elif "exit" or "thank you that is all" in voice_data:
+        friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
         exit()
         
 
 
-def male():
-    hour = int(datetime.datetime.now().hour)
-    if hour>=0 and hour<12:
-        friday("Good morning sir!")
-    elif hour>= 12 and hour < 18:
-        friday("Good Evening sir")
-    else:
-        friday("Welcome Back sir!")
 
-def female():
-    hour = int(datetime.datetime.now().hour)
-    if hour>=0 and hour<12:
-        friday("Good morning madam!")
-    elif hour>= 12 and hour < 18:
-        friday("Good Evening madam!")
-    else:
-        friday("Welcome Back madam!")
-
-time.sleep(1) #waits however many seconds we want
-friday('Hello. Are you a male or female? Please type your response in the terminal to tell me')
-gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  " + "")
-if gender == 'male':
-    male()
-else:
-    female()
-
-friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-friday("So, how may I help you?")
 
 
 
 # friday('How can I help you...')
 #now, we are creating a while loop to continuously have computer listen to what I am saying
+time.sleep(1) #waits however many seconds we want
 while 1:
     voice_data = record_audio() 
     respond(voice_data)
 # from here, you can perform print(voice_data) to double check that your audio is being heard
 
 
-# test one two three
