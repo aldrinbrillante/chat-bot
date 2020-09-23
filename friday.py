@@ -95,7 +95,7 @@ def female():
 # get_bot_response function with user_response inside
 def get_bot_response(user_response):
     #add the required lists for class grade
-    food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to in and out. Just me and you. ha. ha. ha"]
+    food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to Pizza Hut. Just me and you. Just kidding. Unless you are down? ha. ha. ha"]
     food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
     # get a random word from the list food_good and food_bad
     good = random.choice(food_good)
@@ -107,11 +107,11 @@ def get_bot_response(user_response):
         friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
         friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
-    elif "I would love to talk about food":
+    elif "I would love to talk about food" in user_response:
         friday("Okay great! What do you like better? Pizza or Calzones?")
-    elif "I like pizza" in user_response:
+    elif "I like pizza" or "pizza" in user_response:
         friday(good) #IT KEEPS REPEATING THE STATEMENT ABOVE; sometimes it works but most of the time it gets caught in a loop responding to everything as "okay great. what do you like better. pizza or calzones" SOS
-    elif "I like calzones" in user_response:
+    elif "I like calzones" or "calzones" in user_response:
         friday(bad)
     elif 'search' in user_response:
         friday("What do you want to search for?")
