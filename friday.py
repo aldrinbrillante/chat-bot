@@ -61,7 +61,7 @@ def record_audio(ask=False): #setting optional ask argument to False
         # return user_response 
         return user_response
 
-#this while be friday's(jarvis') function 
+#this while be friday's(jarvis') function; uses a temp saved audio file and then deletes it upon 'exit' command 
 def friday(audio_string):
     tts = gTTS(text=audio_string, lang='en')
     r = random.randint(1, 10000000)
@@ -71,6 +71,7 @@ def friday(audio_string):
     print(audio_string)
     os.remove(audio_file)
 
+# this is the function that acts when user responds to being 'male' onto terminal
 def male():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
@@ -79,7 +80,7 @@ def male():
         friday("Good afternoon sir!")
     else:
         friday("Good evening sir!")
-
+# this is the function that acts when user responds to being 'female' onto terminal
 def female():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
