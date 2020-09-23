@@ -101,7 +101,7 @@ def get_bot_response(user_response):
     good = random.choice(food_good)
     bad = random.choice(food_bad)
 
-    #below are the if statement in get_bot_response() for conversation purposes
+    #below are the if statement in get_bot_response() for scripted conversation purposes
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
         friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
