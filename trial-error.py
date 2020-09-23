@@ -90,11 +90,21 @@ def female():
 # now let's start coding the response
 # create function respond with user_response inside
 def get_bot_response(user_response):
+    #add the required lists for class grade
+    food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to in and out. Just me and you. ha. ha. ha"]
+    food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
+
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
         friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
-        friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food.")
+        friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
+    elif "no" or "no thank you" in user_response: 
+        friday("oh. okay then. How may I help you?")
+    elif "yes" or "yes I would":
+        friday("Okay great! What do you like better? Pizza or Calzones?")
+    elif "pizza" in user_response:
+        return friday(choice(food_good))
     elif 'search' in user_response:
         friday("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")
