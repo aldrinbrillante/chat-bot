@@ -1,5 +1,8 @@
 # Chat Bot Project
 # run friday.py
+# video part 1: https://youtu.be/ubchTOfqHwY
+# video part 2: https://youtu.be/w6KTOCk4Fg0
+
 
 Language used: Python
 
