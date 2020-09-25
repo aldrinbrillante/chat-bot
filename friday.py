@@ -43,7 +43,7 @@ def record_audio(ask=False): #setting optional ask argument to False
     with sr.Microphone() as source:
         #create if statement for ask argument
         if ask:
-            return(ask)
+            print(ask)
         # create audio variable and set to recognizer object and then use listen() method. Pass in source which is our microphone
         audio = r.listen(source, phrase_time_limit=3) 
 
@@ -110,7 +110,7 @@ def get_bot_response(user_response):
     elif "I would love to talk about food" in user_response:
         return friday("Okay great! What do you like better? Pizza or Calzones?")
     elif "I like pizza" in user_response:
-        return friday(good) #IT KEEPS REPEATING THE STATEMENT ABOVE; sometimes it works but most of the time it gets caught in a loop responding to everything as "okay great. what do you like better. pizza or calzones" SOS
+        return friday(good) 
     elif "I like calzones" in user_response:
         return friday(bad)
     elif 'search' in user_response:
@@ -118,17 +118,17 @@ def get_bot_response(user_response):
         search = record_audio("Please say what you want to search for: ")
         url = "https://google.com/search?q=" + search
         webbrowser.get().open(url)
-        friday("Here is what I found for " + search)
+        return friday("Here is what I found for " + search)
     elif 'find location' in user_response:
         location = record_audio("What is the location?: ")
         url = "https://google.nl/maps/place/" + location + "/&amp;"
         webbrowser.get().open(url)
-        friday("Here is the location of " + location)
+        return friday("Here is the location of " + location)
     elif 'find place' in user_response:
         location = record_audio("What is the location?: ")
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
-        friday("Here is the location of " + location)
+        return friday("Here is the location of " + location)
     elif "exit" in user_response:
         friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
         return exit() #exits function, while loop, and program upon command
