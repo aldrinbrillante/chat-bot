@@ -43,7 +43,7 @@ def record_audio(ask=False): #setting optional ask argument to False
     with sr.Microphone() as source:
         #create if statement for ask argument
         if ask:
-            print(ask)
+            return(ask)
         # create audio variable and set to recognizer object and then use listen() method. Pass in source which is our microphone
         audio = r.listen(source, phrase_time_limit=3) 
 
@@ -131,7 +131,7 @@ def get_bot_response(user_response):
         friday("Here is the location of " + location)
     elif "exit" in user_response:
         friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
-        exit() #exits function, while loop, and program upon command
+        return exit() #exits function, while loop, and program upon command
 
 
 # below is the beginning of what user will initially hear when you run the program
