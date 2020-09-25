@@ -110,9 +110,9 @@ def get_bot_response(user_response):
     elif "I would love to talk about food" in user_response:
         return friday("Okay great! What do you like better? Pizza or Calzones?")
     elif "I like pizza" in user_response:
-        friday(good) #IT KEEPS REPEATING THE STATEMENT ABOVE; sometimes it works but most of the time it gets caught in a loop responding to everything as "okay great. what do you like better. pizza or calzones" SOS
+        return friday(good) #IT KEEPS REPEATING THE STATEMENT ABOVE; sometimes it works but most of the time it gets caught in a loop responding to everything as "okay great. what do you like better. pizza or calzones" SOS
     elif "I like calzones" in user_response:
-        friday(bad)
+        return friday(bad)
     elif 'search' in user_response:
         friday("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")

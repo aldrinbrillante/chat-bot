@@ -10,7 +10,7 @@ This project is a chat bot project using Python 3
 
 main class: friday.py
 
-trial and error class: trial-error.py
+trial and error class: trial-error.py // was used throughout majority of the project for trial/error code purpsoes. 
 
 ASSIGNMENT REQUIREMENTS:
 
