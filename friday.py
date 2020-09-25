@@ -76,20 +76,20 @@ def friday(audio_string):
 def male():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        friday("Good morning sir!")
+        return friday("Good morning sir!")
     elif hour>= 12 and hour < 18:
-        friday("Good afternoon sir!")
+        return friday("Good afternoon sir!")
     else:
-        friday("Good evening sir!")
+        return friday("Good evening sir!")
 # this is the function that acts when user responds to being 'female' onto terminal
 def female():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        friday("Good morning madam!")
+        return friday("Good morning madam!")
     elif hour>= 12 and hour < 18:
-        friday("Good afternoon madam!")
+        return friday("Good afternoon madam!")
     else:
-        friday("Good evening madam!")
+        return friday("Good evening madam!")
 
 # now let's start coding the response + interaction 
 # get_bot_response function with user_response inside
