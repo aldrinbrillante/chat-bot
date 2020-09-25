@@ -12,6 +12,8 @@ main class: friday.py
 
 trial and error class: trial-error.py // was used throughout majority of the project for trial/error code purpsoes. 
 
+UNRESOLVED ISSUES: microphone is sometimes not being captured. Not sure yet as to why...
+
 ASSIGNMENT REQUIREMENTS:
 
 Create a function called get_bot_response(). This function must: 
