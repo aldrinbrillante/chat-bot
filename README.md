@@ -19,7 +19,7 @@ ________________________________________________________________________________
 
 CREDIT RECOGNITION: 
 
-Recognition for assistance goes to Traversy Media (@TraversyMedia) on Youtube for helping me learn the package imports for a speech_recognition chat-bot. My record_audio() and my renamed jarvis / friday() are his code via Youtube, as well as inputting the search an dlocation variable. It was through his explanation that I was able to understand the functionality of speech_recognition, pyaudio, dattime to implement and use it for this project. Thank you so much, Traversy Media!!! #lifesavah
+Recognition for several code and function assistance goes to **Traversy Media** (@TraversyMedia) on Youtube for helping me learn the package imports for a speech_recognition chat-bot. My record_audio() and my renamed jarvis / friday() are his code via Youtube, as well as inputting the search an dlocation variable. It was through his explanation that I was able to understand the functionality of speech_recognition, pyaudio, dattime to implement and use it for this project. Thank you so much, Traversy Media!!! #lifesavah
 
 __________________________________________________________________________________________
 
