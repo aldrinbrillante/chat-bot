@@ -16,10 +16,10 @@ UNRESOLVED ISSUES: microphone is sometimes not being captured. Not sure yet as t
 
 CREDIT RECOGNITION: 
 
-Recognition for assistance goes to Traversy Media (@TraversyMedia) on Youtube for helping me learn the package imports for a speech_recognition chat-bot. My record_audio() and my renamed jarvis / friday() are his code via Youtube, and it was through his explanation that I was able to understand the functionality of speech_recognition, pyaudio, dattime to implement and use it for this project. Thank you so much, Traversy Media!!! #lifesavah
+Recognition for assistance goes to Traversy Media (@TraversyMedia) on Youtube for helping me learn the package imports for a speech_recognition chat-bot. My record_audio() and my renamed jarvis / friday() are his code via Youtube, as well as inputting the search an dlocation variable. It was through his explanation that I was able to understand the functionality of speech_recognition, pyaudio, dattime to implement and use it for this project. Thank you so much, Traversy Media!!! #lifesavah
 
 
-Make sure you credit the Youtuber in your readme for the code that was not original
+_________________________________________________________________z
 
 ASSIGNMENT REQUIREMENTS:
 
