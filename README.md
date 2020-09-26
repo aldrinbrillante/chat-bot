@@ -25,6 +25,13 @@ Recognition for several code and knowledge assistance goes to ***Traversy Media*
 
 __________________________________________________________________________________________
 
+**Shoutouts**
+
+Quick shoutout to ***Travaerse Media*** for helping me understand speech_recognition/pyaudio/webbrowser functionality and quick shoutout to ***Instructor Joi*** for leading me to such a cool tutorial ***big snaps***
+
+__________________________________________________________________________________________
+
+
 **ASSIGNMENT REQUIREMENTS:**
 
 Create a function called get_bot_response(). This function must: 
