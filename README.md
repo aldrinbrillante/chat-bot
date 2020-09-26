@@ -14,6 +14,11 @@ trial and error class: trial-error.py // was used throughout majority of the pro
 
 UNRESOLVED ISSUES: microphone is sometimes not being captured. Not sure yet as to why...
 
+CREDIT: Recognition for assistance goes to Traversy Media (@TraversyMedia) on Youtube for helping me learn the package imports for a speech_recognition chat-bot. My record_audio() and my search and location variables are his code via Youtube, and it was through his explanation that I was able to understand the functionality of speech_recognition and pyaudio to implement and use it for this project. Thank you so much, Traversy Media!!! 
+
+
+Make sure you credit the Youtuber in your readme for the code that was not original
+
 ASSIGNMENT REQUIREMENTS:
 
 Create a function called get_bot_response(). This function must: 
@@ -35,3 +40,4 @@ Get user input using the input() function and pass that user input to the get_bo
 Print out the chat bot’s response that is returned from the get_bot_response() function
 
 Use a while() loop to keep running your chat bot until the user enters "done".
+
