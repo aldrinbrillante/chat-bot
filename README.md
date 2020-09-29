@@ -27,7 +27,7 @@ ________________________________________________________________________________
 
 **Shoutouts**
 
-Quick shoutout to ***Travaerse Media*** for helping me understand speech_recognition/pyaudio/webbrowser functionality and quick shoutout to ***Instructor Joi*** for leading me to such a cool tutorial ***big snaps***
+Quick shoutout to ***Traversy Media*** for helping me understand speech_recognition/pyaudio/webbrowser functionality and quick shoutout to ***Instructor Joi*** for leading me to such a cool tutorial ***big snaps***
 
 __________________________________________________________________________________________
 
