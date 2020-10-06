@@ -1,3 +1,17 @@
 Things to do first:::
 
 1. Install pygame 
+    Try pip3 install game
+    If that doesnt work:
+        $ python3.8 -m pip install pygame==2.0.0.dev6
+
+2. Install neat-python
+    $ pip3 install neat-python
+
+3. Find/download flappy bird images
+    - base
+    - background
+    -bird 1
+    -bird 2
+    -bird 3
+    -pipe
