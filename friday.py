@@ -1,5 +1,5 @@
 #import other classes?
- 
+import flappy_bird 
 
 
 import os
@@ -143,6 +143,7 @@ friday('Hello. Are you a male or female? Please type your response in the termin
 gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
 
 if gender == 'male':
+    flappy_bird()
     male()
 elif gender == 'female':
     female()
