@@ -1,3 +1,7 @@
+#import other classes?
+ 
+
+
 import os
 from os import system #this is a core python package
 
