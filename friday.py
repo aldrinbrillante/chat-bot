@@ -1,5 +1,5 @@
 #import other classes?
-import flappy_bird 
+#import flappy_bird 
 
 
 import os
