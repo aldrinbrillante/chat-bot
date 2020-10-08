@@ -143,7 +143,7 @@ friday('Hello. Are you a male or female? Please type your response in the termin
 gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
 
 if gender == 'male':
-    flappy_bird()
+    # flappy_bird()
     male()
 elif gender == 'female':
     female()
