@@ -34,4 +34,4 @@ class Bird:
     # variable: max bird rotation is 25 degrees. 
     MAX_ROTATION = 25
     #
-    ROATION_VELOCITY 
+    # ROATION_VELOCITY 
