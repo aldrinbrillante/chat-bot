@@ -1,6 +1,5 @@
 #import other classes?
 #import flappy_bird 
-#from flappy_bird import playFlap
 import flappy_bird as fb
 
 import os
