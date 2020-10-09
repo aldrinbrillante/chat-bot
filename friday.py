@@ -1,6 +1,7 @@
 #import other classes?
 #import flappy_bird 
-
+#from flappy_bird import playFlap
+import flappy_bird as fb
 
 import os
 from os import system #this is a core python package
@@ -143,7 +144,7 @@ friday('Hello. Are you a male or female? Please type your response in the termin
 gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
 
 if gender == 'male':
-    # flappy_bird()
+    fb.playFlap()
     male()
 elif gender == 'female':
     female()
