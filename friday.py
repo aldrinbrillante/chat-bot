@@ -1,6 +1,7 @@
-#import other classes?
+#import other function is different files?
 #import flappy_bird 
 import flappy_bird as fb
+import mood_chat
 
 import os
 from os import system #this is a core python package
@@ -143,7 +144,6 @@ friday('Hello. Are you a male or female? Please type your response in the termin
 gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
 
 if gender == 'male':
-    fb.playFlap()
     male()
 elif gender == 'female':
     female()
