@@ -1,7 +1,7 @@
 #import other function is different files?
 #import flappy_bird 
-import flappy_bird as fb
-import mood_chat
+# import flappy_bird as fb
+# import mood_chat
 
 import os
 from os import system #this is a core python package
