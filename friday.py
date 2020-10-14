@@ -1,7 +1,3 @@
-#import other function is different files?
-#import flappy_bird 
-import flappy_bird as fb
-from mood_chat import mood_chat
 
 import os
 from os import system #this is a core python package
@@ -157,6 +153,4 @@ time.sleep(1) #waits however many seconds we want
 while 1:
     user_response = record_audio() 
     get_bot_response(user_response)
-    mood_chat(user_response)
-
 
